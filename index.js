@@ -7,11 +7,10 @@ const Collatz = {
 };
 
 function CountSequence(number, counter = 1) {
+  counter++;
   if (number % 2 == 0 && number != 1) {
-    counter++;
     return CountSequence(number / 2, counter);
   } else if (number != 1) {
-    counter++;
     return CountSequence(number * 3 + 1, counter);
   } else {
     throw counter;
