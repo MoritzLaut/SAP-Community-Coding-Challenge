@@ -1,6 +1,6 @@
 "use strict";
 const Collatz = {
-  start: 700000,
+  start: 1,
   end: 1000000,
   solution: 0,
   length: 0,
@@ -18,17 +18,16 @@ function CountSequence(number, counter = 1) {
   }
 }
 
-var number = Collatz.start;
-while (number < Collatz.end) {
+while (Collatz.start < Collatz.end) {
   try {
-    CountSequence(number);
+    CountSequence(Collatz.start);
   } catch (counter) {
     if (Collatz.length < counter) {
       Collatz.length = counter;
       Collatz.solution = Collatz.start;
     }
   }
-  number++;
+  Collatz.start++;
 }
 
-console.log(Collatz.solution);
+console.log(`Number: ${Collatz.solution} Length: ${Collatz.length}`);
