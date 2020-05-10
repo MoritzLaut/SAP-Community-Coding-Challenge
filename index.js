@@ -6,23 +6,23 @@ const Collatz = {
   length: 0,
 };
 
-function CountSequence(number, counter = 1) {
-  counter++;
+function CountSequence(number, steps = 1) {
+  steps++;
   if (number % 2 == 0 && number != 1) {
-    return CountSequence(number / 2, counter);
+    return CountSequence(number / 2, steps);
   } else if (number != 1) {
-    return CountSequence(number * 3 + 1, counter);
+    return CountSequence(number * 3 + 1, steps);
   } else {
-    throw counter;
+    throw steps;
   }
 }
 
 while (Collatz.start < Collatz.end) {
   try {
     CountSequence(Collatz.start);
-  } catch (counter) {
-    if (Collatz.length < counter) {
-      Collatz.length = counter;
+  } catch (steps) {
+    if (Collatz.length < steps) {
+      Collatz.length = steps;
       Collatz.solution = Collatz.start;
     }
   }

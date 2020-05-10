@@ -4,4 +4,6 @@ https://blogs.sap.com/2020/04/27/sap-community-coding-challenge-nr.2/
 
 ## Solution
 
-1. https://repl.it/repls/FlawedEllipticalPixels
+Number: 837799 Length: 526
+
+https://repl.it/repls/FlawedEllipticalPixels
